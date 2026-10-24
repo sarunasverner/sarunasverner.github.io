@@ -70,11 +70,11 @@
       '  float dens = clamp(1.0 - (g / levels - 0.12) / 0.35, 0.0, 1.0);\n' +
       '  float d = abs(fract(f / levels + 0.5) - 0.5) * levels / g;\n' +
       '  float line = clamp(1.0 - d / 0.85, 0.0, 1.0) * dens;\n' +
-      '  img = mix(img, mix(chalk, col, 0.88), 0.6 * line);\n' +
+      '  img = mix(img, mix(chalk, col, 0.88), 0.5 * line);\n' +
       '  float L5 = levels * 5.0;\n' +
       '  float di = abs(fract(f / L5 + 0.5) - 0.5) * L5 / g;\n' +
       '  float idx = clamp(1.0 - di / 1.15, 0.0, 1.0) * dens;\n' +
-      '  img = mix(img, mix(chalk, col, 0.7), 0.55 * idx);\n' +
+      '  img = mix(img, mix(chalk, col, 0.7), 0.45 * idx);\n' +
       // the highest peaks and deepest troughs glow faintly
       '  float pk = smoothstep(1.6, 2.9, f), tr = smoothstep(1.6, 2.9, -f);\n' +
       '  img += vec3(1.0, 0.88, 0.7) * pk * pk * 0.7 + cyan * tr * tr * 0.25;\n' +
@@ -144,7 +144,7 @@
   if (!dot) return;
   var N_START = 60, RATE = 2;                    // e-folds per second
   var PHI_E = 0.94, EPE = Math.exp(Math.sqrt(2 / 3) * PHI_E);
-  var X0 = -1.2, X1 = 6.0, PX0 = 6, PX1 = 234, PY0 = 76, PY1 = 10, VMAX = 1.2;
+  var X0 = -1.2, X1 = 6.0, PX0 = 6, PX1 = 234, PY0 = 128, PY1 = 14, VMAX = 1.2;   // must match the SVG in build.py
   function V(phi) { var e = 1 - Math.exp(-Math.sqrt(2 / 3) * phi); return e * e; }
   function phiOfN(N) { return Math.sqrt(1.5) * Math.log(4 * Math.max(0, N) / 3 + EPE); }   // slow roll, leading order
   function px(phi) { return PX0 + (phi - X0) / (X1 - X0) * (PX1 - PX0); }
