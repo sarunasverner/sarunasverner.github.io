@@ -271,16 +271,16 @@ a:hover { text-decoration-color: currentColor; }
 @media (max-width: 860px) { .contact { grid-template-columns: 1fr; } }
 
 /* ------------------------------------------------------------------- footer */
-.site-footer { border-top: 1px solid var(--rule); padding: 40px 0 44px; font-family: var(--sans); font-size: var(--t-meta); color: var(--muted); }
-.site-footer .grid { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 24px 48px; align-items: start; }
-.site-footer .who { color: var(--ink); font-family: var(--serif); font-size: 1.125rem; margin-bottom: 4px; }
-.site-footer ul { list-style: none; display: flex; flex-wrap: wrap; gap: 8px 22px; margin: 0; padding: 0; justify-content: flex-end; }
-.site-footer a { color: var(--ink); display: inline-flex; align-items: center; gap: 7px; }
-.site-footer .ico { width: 19px; height: 19px; flex: none; color: color-mix(in srgb, var(--ink) 72%, transparent); transition: color 0.15s; }
+.site-footer { border-top: 1px solid var(--rule); padding: 44px 0 48px; font-family: var(--sans); font-size: 1.0625rem; color: var(--muted); }
+.site-footer .grid { display: grid; grid-template-columns: 1fr; gap: 24px; align-items: start; }
+.site-footer .who { color: var(--ink); font-family: var(--serif); font-size: 1.5rem; margin-bottom: 4px; }
+.site-footer ul { list-style: none; display: flex; flex-wrap: wrap; gap: 12px 30px; margin: 0; padding: 0; }
+.site-footer a { color: var(--ink); display: inline-flex; align-items: center; gap: 9px; }
+.site-footer .ico { width: 22px; height: 22px; flex: none; color: color-mix(in srgb, var(--ink) 72%, transparent); transition: color 0.15s; }
 .site-footer a:hover .ico { color: var(--ink); }
 .site-footer .ico-file { object-fit: contain; border-radius: 3px; }
-.site-footer .fine { margin-top: 28px; max-width: 70ch; }
-@media (max-width: 760px) { .site-footer .grid { grid-template-columns: 1fr; } .site-footer ul { justify-content: flex-start; } }
+.site-footer .fine { margin-top: 28px; max-width: 70ch; font-size: var(--t-small); }
+@media (max-width: 760px) { .site-footer ul { gap: 12px 22px; } }
 
 /* --------------------------------------------------------------- page heads */
 .page-head { padding-top: clamp(40px, 5.5vw, 80px); padding-bottom: clamp(32px, 4vw, 56px); }
